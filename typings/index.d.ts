@@ -2,7 +2,7 @@ import { EventEmitter } from "stream";
 import { Express, Request, Response } from "express";
 
 declare module "@daangamesdg/youtube-notifications" {
-	export type NotifierOptions = {
+	export interface NotifierOptions {
 		/**
 		 * The ip/domain name that will be used as a callback URL by the hub
 		 *
@@ -39,7 +39,7 @@ declare module "@daangamesdg/youtube-notifications" {
 		 * @type {string}
 		 */
 		hubUrl?: string;
-	};
+	}
 
 	export interface Notification {
 		video: {
