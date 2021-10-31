@@ -1,0 +1,28 @@
+{
+	"name": "@daangamesdg/youtube-notifications",
+	"version": "1.0.0",
+	"description": "The TypeScript compatible version of 'youtube-notification'",
+	"main": "src/index.js",
+	"types": "typings/index.d.ts",
+	"author": "DaanGamesDG <daan@daangamesdg.wtf>",
+	"license": "MIT",
+	"private": false,
+	"dependencies": {
+		"axios": "^0.24.0",
+		"express": "^4.17.1",
+		"nanoid": "^3.1.30",
+		"xml2js": "^0.4.23"
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.13",
+		"@types/xml2js": "^0.4.9",
+		"eslint": "^8.1.0"
+	},
+	"scripts": {
+		"lint": "eslint src"
+	},
+	"homepage": "https://github.com/DaanGamesDG/youtube-notifications#readme",
+	"repository": {
+		"url": "https://github.com/DaanGamesDG/youtube-notifications"
+	}
+}

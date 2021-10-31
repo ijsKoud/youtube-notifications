@@ -1,0 +1,9 @@
+.github/
+
+.eslintignore
+.eslintrc.json
+
+.gitignore
+.npmignore
+
+renovate.json
