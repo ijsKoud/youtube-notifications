@@ -226,7 +226,7 @@ module.exports = class Notifier extends EventEmitter {
 		};
 
 		// Also return lease_seconds if mode is subscribe
-		if (params["hub.lease_seconds"]) data.lease_seconds = params["hub.lease_seconds"];
+		if (params["hub.lease_seconds"]) data.leaseSeconds = Number(params["hub.lease_seconds"]);
 		this.emit(params["hub.mode"], data);
 	}
 
