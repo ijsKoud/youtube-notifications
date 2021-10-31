@@ -57,8 +57,12 @@ declare module "@daangamesdg/youtube-notifications" {
 	}
 
 	export interface SubscriptionUpdate {
+		/** The Subscription type */
 		type: "subscribe" | "unsubscribe";
+		/** The channel id */
 		channel: string;
+		/** The amount of seconds before the subscription ends */
+		leaseSeconds: number;
 	}
 
 	/**
