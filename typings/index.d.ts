@@ -1,42 +1,72 @@
 import { EventEmitter } from "stream";
 import { Express, Request, Response } from "express";
 
-export type NotifierOptions = {
-	hubCallback: string;
-	secret?: string;
-	middleware?: boolean;
-	port?: number;
-	path?: string;
-	hubUrl?: string;
-};
-
-export interface Notification {
-	video: {
-		id: string;
-		title: string;
-		link: string;
-	};
-	channel: {
-		id: string;
-		name: string;
-		link: string;
-	};
-	published: Date;
-	updated: Date;
-}
-
-export interface SubscriptionUpdate {
-	type: "subscribe" | "unsubscribe";
-	channel: string;
-}
-
 declare module "@daangamesdg/youtube-notifications" {
+	export type NotifierOptions = {
+		/**
+		 * The ip/domain name that will be used as a callback URL by the hub
+		 *
+		 * @type {string}
+		 */
+		hubCallback: string;
+		/**
+		 * The secretkey for the requests to hub
+		 *
+		 * @type {?string}
+		 */
+		secret?: string;
+		/**
+		 * If the notifier will be used with a middleware
+		 *
+		 * @type {boolean}
+		 */
+		middleware?: boolean;
+		/**
+		 * The port to listen on
+		 *
+		 * @type {?number}
+		 */
+		port?: number;
+		/**
+		 * The path on which server will interact with the hub
+		 *
+		 * @type {string}
+		 */
+		path?: string;
+		/**
+		 * The hub URL
+		 *
+		 * @type {string}
+		 */
+		hubUrl?: string;
+	};
+
+	export interface Notification {
+		video: {
+			id: string;
+			title: string;
+			link: string;
+		};
+		channel: {
+			id: string;
+			name: string;
+			link: string;
+		};
+		published: Date;
+		updated: Date;
+	}
+
+	export interface SubscriptionUpdate {
+		type: "subscribe" | "unsubscribe";
+		channel: string;
+	}
+
 	/**
 	 * The options the notifier was instantiated with.
 	 * @name Notifier#options
 	 * @type {NotifierOptions}
 	 */
-	class Notifier extends EventEmitter {
+	export default class Notifier extends EventEmitter {
 		/**
 		 * Emitted when a new video is uploaded
 		 * @event Notifier#notified
