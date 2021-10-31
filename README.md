@@ -15,7 +15,7 @@ yarn add @daangamesdg/youtube-notifications
 JavaScript example:
 
 ```js
-const Notifier = require("@daangamesdg/youtube-notifications");
+const { Notifier } = require("@daangamesdg/youtube-notifications");
 
 const notifier = new Notifier({
 	hubCallback: "https://example.com/youtube",
@@ -36,7 +36,7 @@ notifier.subscribe("channel_1");
 TypeScript example:
 
 ```ts
-import Notifier from "@daangamesdg/youtube-notifications";
+import { Notifier } from "@daangamesdg/youtube-notifications";
 
 const notifier = new Notifier({
 	hubCallback: "https://example.com/youtube",
