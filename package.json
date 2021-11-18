@@ -4,7 +4,7 @@
 	"description": "The TypeScript compatible version of 'youtube-notification'",
 	"main": "src/index.js",
 	"types": "typings/index.d.ts",
-	"author": "DaanGamesDG <daan@daangamesdg.wtf>",
+	"author": "DaanGamesDG <daan@daangamesdg.xyz>",
 	"license": "MIT",
 	"private": false,
 	"dependencies": {
