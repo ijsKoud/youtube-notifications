@@ -9,8 +9,8 @@
 	"private": false,
 	"dependencies": {
 		"axios": "^0.27.2",
-		"express": "^4.18.0",
-		"nanoid": "^3.3.3",
+		"express": "^4.18.1",
+		"nanoid": "^3.3.4",
 		"xml2js": "^0.4.23"
 	},
 	"devDependencies": {
